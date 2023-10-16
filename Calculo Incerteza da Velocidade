@@ -1,0 +1,18 @@
+import math
+
+def calcular_incerteza_na_velocidade(d, delta_d, t, delta_t):
+    # Calcular a velocidade
+    v = d / t
+
+    # Calcular a incerteza na velocidade
+    delta_v = v * math.sqrt((delta_d / d)**2 + (delta_t / t)**2)
+
+    return delta_v
+
+d = 0.126  # Distância em metros
+delta_d = 0.1  # Incerteza na distância em metros
+t = 0.18921  # Tempo em segundos
+delta_t = 0.0000942809 # Incerteza no tempo em segundos
+
+incerteza_na_velocidade = calcular_incerteza_na_velocidade(d, delta_d, t, delta_t)
+print(f"A incerteza na velocidade é {incerteza_na_velocidade} m/s.")
