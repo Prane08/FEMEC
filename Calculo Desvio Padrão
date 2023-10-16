@@ -1,0 +1,16 @@
+def calcular_desvio_padrao(dados, media):
+    # Número de medidas
+    N = len(dados)
+
+    # Calcular o desvio padrão
+    variancia = sum((xi - media) ** 2 for xi in dados) / (N - 1)
+    desvio_padrao = variancia ** 0.5
+
+    return desvio_padrao
+
+# Exemplo de uso:
+dados = [0.54760, 0.55030, 0.56185]  # Substitua isso pelos seus próprios dados
+media = 0.55325
+desvio_padrao = calcular_desvio_padrao(dados, media)
+print(f"O desvio padrão é {desvio_padrao} m/s.")
+print(f"A média é: {media}")
