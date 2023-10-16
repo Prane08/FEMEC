@@ -1,0 +1,14 @@
+def calcular_media(dados):
+    # Número de medidas
+    N = len(dados)
+
+    # Calcular a média
+    media = sum(dados) / N
+
+    return media
+
+# Exemplo de uso:
+dados = [0.54760, 0.55030, 0.56185]  # Substitua isso pelos seus próprios dados
+
+media = calcular_media(dados)
+print(f'A média é: {media}')
